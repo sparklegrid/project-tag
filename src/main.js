@@ -1,8 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
+import axios from 'axios'
 
-Vue.config.productionTip = false
+require('./assets/sass/main.scss');
+
+Vue.use({
+	install(Vue) {
+		Vue.prototype.$api = axios.create({
+			baseURL: 'http://localhost:3000/api/'
+		})
+	}
+});
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App)
-}).$mount('#app')
+	render: h => h(App)
+}).$mount('#app');
