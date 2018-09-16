@@ -18,14 +18,14 @@
 					Home
 				</a>
 				<div class="navbar-item has-dropdown is-hoverable">
-					<a class="navbar-link" href="/documentation/overview/start/">
+					<a class="navbar-link">
 						Credits
 					</a>
 					<div class="navbar-dropdown is-boxed">
-						<a class="navbar-item" href="https://twitter.com/radiumrasheed">
+						<a class="navbar-item" href="https://twitter.com/radiumrasheed" target="_blank">
 							Radiumrasheed
 						</a>
-						<a class="navbar-item" href="https://sparklegrid.tech">
+						<a class="navbar-item" href="https://sparklegrid.tech" target="_blank">
 							Sparklegrid
 						</a>
 					</div>
@@ -37,7 +37,7 @@
 					<div class="field is-grouped">
 						<p class="control">
 							<a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank"
-							   href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
+							   href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
               <span class="icon">
                 <i class="fab fa-twitter"></i>
               </span>
