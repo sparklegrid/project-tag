@@ -23,7 +23,7 @@
 				<div class="field-body">
 					<div class="field is-grouped">
 						<div class="control">
-							<button class="button is-primary is-rounded" v-on:click="analyzeParagraph">Analyze</button>
+							<button class="button is-primary is-rounded" v-on:click="analyzeParagraph" v-bind:class="{'is-loading': loading}" :disabled="loading">Analyze</button>
 						</div>
 						<div class="control">
 							<button class="button is-warning is-rounded" v-on:click="clear">Clear</button>
@@ -67,13 +67,14 @@
 		},
 		data: () => ({
 			paragraph: '',
+			loading: false,
 			error: '',
 			solution: null
 		}),
 		computed: {},
 		methods: {
 			analyzeParagraph: function () {
-
+				this.loading = true;
 				this.$api.post('/speech/analyze', {
 					paragraph: this.paragraph,
 				})
@@ -83,6 +84,7 @@
 						.catch(error => {
 							this.error = error.message;
 						})
+						.finally(() => this.loading = false)
 			},
 			clear: function () {
 				this.paragraph = null;
