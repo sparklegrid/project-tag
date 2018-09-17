@@ -49,7 +49,7 @@
 							</tr>
 							</tbody>
 						</table>
-						<p v-else>No key word found!</p>
+						<p v-else>{{ error || 'No key word found!' }}</p>
 					</div>
 				</article>
 
@@ -66,10 +66,9 @@
 			// paragraph: String
 		},
 		data: () => ({
-			paragraph: 'the boy wants to eat his food and drive in the car',
+			paragraph: '',
 			error: '',
-			solution: null,
-			profile: ''
+			solution: null
 		}),
 		computed: {},
 		methods: {
@@ -80,6 +79,9 @@
 				})
 						.then(response => {
 							this.solution = response.data.data
+						})
+						.catch(error => {
+							this.error = error.message;
 						})
 			},
 			clear: function () {
