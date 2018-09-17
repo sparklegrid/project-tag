@@ -23,10 +23,20 @@
 				<div class="field-body">
 					<div class="field is-grouped">
 						<div class="control">
-							<button class="button is-primary is-rounded" v-on:click="analyzeParagraph" v-bind:class="{'is-loading': loading}" :disabled="loading">Analyze</button>
+							<button class="button is-primary is-rounded" v-on:click="analyzeParagraph" v-bind:class="{'is-loading': loading}" :disabled="loading">
+								<span class="icon is-small">
+									<i class="fas fa-check"></i>
+								</span>
+								<span>Analyze</span>
+							</button>
 						</div>
 						<div class="control">
-							<button class="button is-warning is-rounded" v-on:click="clear">Clear</button>
+							<button class="button is-warning is-rounded" v-on:click="clear">
+								<span>Clear</span>
+								<span class="icon is-small">
+									<i class="fas fa-times"></i>
+								</span>
+							</button>
 						</div>
 					</div>
 				</div>
